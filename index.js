@@ -101,11 +101,11 @@ CSGOClient.prototype.launch = function() {
   if (this.debug) {
     util.log("Launching CS:GO");
   }
-  this._user.gamesPlayed({
-    games_played: [{
+  this._user.gamesPlayed([
+    {
       game_id: '730'
-    }]
-  });
+    }
+  ]);
 
   // Keep knocking on the GCs door until it accepts us.
   this._gcClientHelloIntervalId = setInterval(this._sendClientHello, 2500);
@@ -123,9 +123,9 @@ CSGOClient.prototype.exit = function() {
     this._gcClientHelloIntervalId = null;
   }
   this._gcReady = false;
-  this._user.gamesPlayed({
-    games_played: [{}]
-  });
+  this._user.gamesPlayed([
+    {}
+  ]);
 
   /* let everyone know we've exited */
   this.emit("exited");

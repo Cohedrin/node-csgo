@@ -1,6 +1,8 @@
 node-csgo
 ========
 
+[node-steam-user](https://github.com/DoctorMcKay/node-steam-user) Compatible fork of node-csgo
+
 Need help? Don't open an issue - ask in the Gitter room.
 
 [![Join the chat at https://gitter.im/joshuaferrara/node-csgo](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/joshuaferrara/node-csgo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
@@ -136,7 +138,7 @@ Sets the rich presence object for the currently logged in user. Rich presence is
 
 ### `itemDataRequest(string s, string a, string d, string m)`
 
-Requests item data for the specified CSGO item inspect link parameters. The parameter `s` has a value when the inspect link is from an inventory; likewise, the parameter `m` has a value when the inspect link is from the market. If there is no value for a given parameter from the inspect link, set it to `"0"`. 
+Requests item data for the specified CSGO item inspect link parameters. The parameter `s` has a value when the inspect link is from an inventory; likewise, the parameter `m` has a value when the inspect link is from the market. If there is no value for a given parameter from the inspect link, set it to `"0"`.
 
 Listen for the `itemData` event for the game coordinator's response.
 
@@ -182,9 +184,9 @@ Emitted when `.exit()` is called as a convenience for clearing handlers upon int
 ### `itemData` (`itemDataResponse`)
 
 ```javascript
-{ 
+{
     "iteminfo":
-   { 
+   {
         "accountid": null,
         "itemid": Long { "low": -1821786863, "high": 1, "unsigned": true },
         "defindex": 7,
@@ -201,7 +203,7 @@ Emitted when `.exit()` is called as a convenience for clearing handlers upon int
         "origin": 8,
         "questid": null,
         "dropreason": null,
-        "floatvalue": 0.4263376295566559 
+        "floatvalue": 0.4263376295566559
     }
 }
 ```
